@@ -1,0 +1,9 @@
+.goBackBtn{
+    display: block;
+    width: 100px;
+    text-align: center;
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: -3px -3px 20px 3px red, 3px 3px 20px 3px blue;
+}

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { fetchCast } from '../../api/movieApi'
-import { ImUser } from 'react-icons/im'
+import css from './Cast.module.css'
 
 export const Cast = () => {
     const [cast, setCast] = useState([])
@@ -21,12 +21,12 @@ export const Cast = () => {
     }, [id])
     
     return (
-        <ul>
+        <ul className={css.list}>
             {cast.map(({id, name, profile_path, character})=>{
                 return (
-                    <li key={id}>
-                        <div>
-                            <img src={profile_path ? `${IMG_URL}${profile_path}`: <ImUser/>} alt={name} width='200' />
+                    <li key={id} >
+                        <div className={css.item}>
+                            <img src={profile_path? `${IMG_URL}${profile_path}`: 'https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg'} alt={name} width='150' height='225'/>
                             <p>{name}</p>
                             <p>Character: {character}</p>
                         </div>

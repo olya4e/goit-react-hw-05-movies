@@ -2,7 +2,8 @@ import { Loader } from 'components/Loader/Loader';
 import { useState, useEffect } from 'react';
 import {useParams, Outlet, useLocation, Link } from 'react-router-dom';
 import { searchMovieById } from '../../api/movieApi';
-import {MovieInfo} from '../../components/MovieDetails/MovieDetails'
+import { MovieInfo } from '../../components/MovieDetails/MovieDetails'
+import css from './MovieDetails.module.css';
 
 export const MovieDetails = () => {
  
@@ -34,7 +35,7 @@ export const MovieDetails = () => {
     return (
         <main>
             <div>
-            <Link to={location}> Go Back</Link>
+            <Link className={css.goBackBtn} to={location}> Go Back</Link>
             {movie&&
                 <MovieInfo details={movie} />}
             {status === 'pending' && <Loader />}

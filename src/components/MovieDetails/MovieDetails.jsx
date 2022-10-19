@@ -26,10 +26,10 @@ export const MovieInfo = ({ details, location }) => {
             <div className={css.addinfo}>
                 <h3>Additional information</h3>
             <ul>
-                <li>
+                <li className={css.infoItem}>
                     <Link to='cast' state={location}>Cast</Link>
                 </li>
-                <li>
+                <li className={css.infoItem}>
                      <Link to='reviews' state={location}>Reviews</Link>
                 </li>
             </ul>

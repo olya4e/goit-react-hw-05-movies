@@ -7,6 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+    background-color: black;
  
 }
 
@@ -26,7 +27,8 @@ a{
 }
 main{
   padding: 30px;
-  background-color: black;
+
+
 }
 .active {
  

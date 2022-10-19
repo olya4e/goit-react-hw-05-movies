@@ -1,0 +1,11 @@
+.list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    color: white;
+}
+.item{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 150px;
+}

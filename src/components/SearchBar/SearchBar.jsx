@@ -1,4 +1,6 @@
-import {useState} from 'react'
+import { useState } from 'react'
+import css from './SearchBar.module.css';
+import { ImSearch } from "react-icons/im";
 export const SearchBar = ({ onSubmit }) => {
     const [query, setQuery] = useState('')
 
@@ -17,15 +19,15 @@ export const SearchBar = ({ onSubmit }) => {
     }
 
     return (
-        <form onSubmit={handleSubmit}>
-            <input  type="text"
+        <form className={css.form} onSubmit={handleSubmit}>
+            <input className={css.input}  type="text"
                 autoComplete="off"
                 autoFocus
                 placeholder="Search movies"
                 value={query}
                 onChange={handleQueryChange}
             />
-        <button type="submit">Search</button>
+            <button className={css.searchBtn} type="submit"><ImSearch className={css.searchBtnIcon} /></button>
         </form>
     )
 }
