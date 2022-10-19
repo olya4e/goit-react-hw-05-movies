@@ -1,6 +1,14 @@
 import { Routes, Route } from "react-router-dom";
 import { Layout } from "./Layout/Layout";
-import {Home} from 'pages/Home';
+import { Home } from 'pages/Home';
+import {Movies} from 'pages/Movies';
+import { MovieDetails } from 'pages/MovieDetails';
+import { NotFound } from 'pages/NotFound';
+import { Cast } from 'components/Cast/Cast'
+import {Reviews} from 'components/Reviews/Reviews'
+
+
+
 
 export const App = () => {
   return (
@@ -8,12 +16,12 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<Layout/>}>
           <Route index element={<Home/>} />
-          <Route path="/movies" element={<div>Movies</div>} />
-          <Route path="/movies/:id" element={<div>MovieDetalies</div>}>
-              <Route path="cast" element={<div>Cast</div>} />
-              <Route path="reviews" element={<div>Reviews</div> }/>
+          <Route path="/movies" element={<Movies/>} />
+          <Route path="/movies/:id" element={<MovieDetails/>}>
+              <Route path="cast" element={<Cast/>} />
+              <Route path="reviews" element={<Reviews/> }/>
             </Route>
-            <Route path="*" element={<div>Not Found</div>}/>
+            <Route path="*" element={<NotFound/>}/>
         </Route>
       </Routes>
    </>
