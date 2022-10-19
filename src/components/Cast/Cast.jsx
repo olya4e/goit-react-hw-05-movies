@@ -26,7 +26,7 @@ export const Cast = () => {
                 return (
                     <li key={id}>
                         <div>
-                            <img src={profile_path ? `${IMG_URL}${profile_path}`: {ImUser}} alt={name} width='200' />
+                            <img src={profile_path ? `${IMG_URL}${profile_path}`: <ImUser/>} alt={name} width='200' />
                             <p>{name}</p>
                             <p>Character: {character}</p>
                         </div>

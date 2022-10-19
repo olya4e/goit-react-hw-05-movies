@@ -18,7 +18,7 @@ export const Movies = () => {
             try {
                 setStatus('pending')
                 const { data } = await fetchMovieByQuery(query)
-                if (data.length === 0) {
+                if (data.results.length === 0) {
                     alert('Ooops, someting went wrong. Please, try again.');
                     setStatus('rejected');
                     return;

@@ -1,7 +1,8 @@
 import {useEffect, useState} from 'react'
 import { ListMovies } from "components/ListMovies/ListMovies"
 import { Loader } from "components/Loader/Loader";
-import {fetchTrendingMovie} from '../api/movieApi';
+import { fetchTrendingMovie } from '../../api/movieApi';
+import css from 'pages/Home/Home.module.css';
 
 export const Home = () => {
     const [trendingMovies, setTrendingMovies] = useState([])
@@ -35,7 +36,7 @@ export const Home = () => {
     
     return (
         <main>
-            <h1>Trending today</h1>
+            <h1 className={css.title}>Trending today</h1>
             {trendingMovies.length > 0 && (
                 <ListMovies movies={trendingMovies} path={'movies/'}/>
             )}

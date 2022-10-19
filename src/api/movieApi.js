@@ -17,6 +17,12 @@ export const fetchMovieByQuery = async searchQuery => {
       query: searchQuery,
     },
   });
+
+  if (response.data.total_pages === 0) {
+    alert('Ooops, someting went wrong. Please, try again.');
+
+    return;
+  }
   return response;
 };
 

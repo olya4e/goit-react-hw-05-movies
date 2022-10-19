@@ -1,9 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 import { Layout } from "./Layout/Layout";
-import { Home } from 'pages/Home';
-import {Movies} from 'pages/Movies';
-import { MovieDetails } from 'pages/MovieDetails';
-import { NotFound } from 'pages/NotFound';
+import { Home } from 'pages/Home/Home';
+import {Movies} from 'pages/Movies/Movies';
+import { MovieDetails } from 'pages/Moviedetails/MovieDetails';
+import { NotFound } from 'pages/NotFound/NotFound';
 import { Cast } from 'components/Cast/Cast'
 import {Reviews} from 'components/Reviews/Reviews'
 

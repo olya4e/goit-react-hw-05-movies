@@ -1,0 +1,20 @@
+.wrapper{
+    display: flex;
+    max-width: 1200px;
+    margin-bottom: 20px;
+    color: rgb(255, 254, 254);
+    border-bottom: 1px solid rgb(42, 54, 59);
+    margin: 0 auto;
+}
+.movieInfo{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 15px;
+}
+h3{
+    color: tomato;
+}
+.addinfo{
+    color: white;
+}
