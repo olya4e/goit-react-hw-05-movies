@@ -34,6 +34,7 @@ export const fetchCast = async id => {
       api_key: API_KEY,
     },
   });
+  return response;
 };
 
 export const fetchReviews = async id => {
