@@ -1,6 +1,7 @@
 import { Suspense } from "react"
 import { Outlet, NavLink } from "react-router-dom"
 import { ImHome, ImFilm } from "react-icons/im";
+import {Loader} from 'components/Loader/Loader';
 import css from './Layout.module.css';
 
 export const Layout = () => {
@@ -12,7 +13,7 @@ export const Layout = () => {
                     <NavLink className={css.link} to='/movies' end><ImFilm className={css.icon}/> Movies</NavLink>  
                 </nav>
             </header>
-            <Suspense fallback={null}>
+            <Suspense fallback={<Loader/>}>
                 <Outlet/>
             </Suspense>
         </>

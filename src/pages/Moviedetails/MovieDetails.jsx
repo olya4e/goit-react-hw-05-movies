@@ -1,8 +1,8 @@
-import { Loader } from 'components/Loader/Loader';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import {useParams, Outlet, useLocation, Link } from 'react-router-dom';
 import { searchMovieById } from '../../api/movieApi';
-import { MovieInfo } from '../../components/MovieDetails/MovieDetails'
+import { MovieInfo } from 'components/MovieDetails/MovieDetails'
+import {Loader} from 'components/Loader/Loader';
 import css from './MovieDetails.module.css';
 
 export default function MovieDetails () {
@@ -39,7 +39,9 @@ export default function MovieDetails () {
             {movie&&
                 <MovieInfo details={movie} />}
             {status === 'pending' && <Loader />}
-            <Outlet/>
+                <Suspense fallback={<Loader/>}>
+                    <Outlet/>
+            </Suspense>
         </div>
         </main>
         

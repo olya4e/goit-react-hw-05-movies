@@ -30,7 +30,7 @@ export const Reviews = () => {
                         </li>
                     })}
                 </ul>) :
-            <p>We don't have any reviews for this movie.</p>    
+            <p className={css.noReview}>We don't have any reviews for this movie.</p>    
     }
             </div>
         </>
