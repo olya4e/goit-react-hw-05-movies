@@ -5,7 +5,7 @@ import { searchMovieById } from '../../api/movieApi';
 import { MovieInfo } from '../../components/MovieDetails/MovieDetails'
 import css from './MovieDetails.module.css';
 
-export const MovieDetails = () => {
+export default function MovieDetails () {
  
     const { id } = useParams()
     const [movie, setMovie] = useState(null)

@@ -1,12 +1,14 @@
+import {lazy, Suspense} from 'react';
 import { Routes, Route } from "react-router-dom";
 import { Layout } from "./Layout/Layout";
-import { Home } from 'pages/Home/Home';
-import {Movies} from 'pages/Movies/Movies';
-import { MovieDetails } from 'pages/Moviedetails/MovieDetails';
-import { NotFound } from 'pages/NotFound/NotFound';
+
 import { Cast } from 'components/Cast/Cast'
 import {Reviews} from 'components/Reviews/Reviews'
 
+const Home = lazy(() => import('pages/Home/Home'));
+const Movies = lazy(() => import('pages/Movies/Movies'));
+const MovieDetails = lazy(() => import('pages/Moviedetails/MovieDetails'));
+const NotFound = lazy(() => import('pages/NotFound/NotFound'));
 
 
 
@@ -21,7 +23,7 @@ export const App = () => {
               <Route path="cast" element={<Cast/>} />
               <Route path="reviews" element={<Reviews/> }/>
             </Route>
-            <Route path="*" element={<NotFound/>}/>
+            <Route path="*" element={<Home/>}/>
         </Route>
       </Routes>
    </>

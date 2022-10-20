@@ -4,7 +4,7 @@ import { Loader } from "components/Loader/Loader";
 import { fetchTrendingMovie } from '../../api/movieApi';
 import css from 'pages/Home/Home.module.css';
 
-export const Home = () => {
+export default function Home  ()  {
     const [trendingMovies, setTrendingMovies] = useState([])
     const [status, setStatus] = useState('idle')
     useEffect(() => {

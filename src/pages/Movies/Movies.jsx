@@ -4,7 +4,7 @@ import {fetchMovieByQuery} from 'api/movieApi';
 import { SearchBar } from 'components/SearchBar/SearchBar';
 import { ListMovies } from 'components/ListMovies/ListMovies';
 import {Loader} from 'components/Loader/Loader';
-export const Movies = () => {
+export default function Movies () {
     const [searchMovies, setSearchMovies] = useState([]);
     const [searchParams, setSearchParams] = useSearchParams();
     const [status, setStatus] = useState('idle');
