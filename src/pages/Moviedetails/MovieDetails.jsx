@@ -4,13 +4,16 @@ import { searchMovieById } from '../../api/movieApi';
 import { MovieInfo } from 'components/MovieDetails/MovieDetails'
 import {Loader} from 'components/Loader/Loader';
 import css from './MovieDetails.module.css';
+import { useRef } from 'react';
 
 export default function MovieDetails () {
  
     const { id } = useParams()
     const [movie, setMovie] = useState(null)
     const [status, setStatus] = useState('idle')
-     const location = useLocation().state?.from ?? '/';
+    const location = useLocation();
+    const prevLink = useRef(location.state?.from)
+    
     
     useEffect(() => {
         const getMovieById = async () => {
@@ -35,7 +38,7 @@ export default function MovieDetails () {
     return (
         <main>
             <div>
-            <Link className={css.goBackBtn} to={location}> Go Back</Link>
+            <Link className={css.goBackBtn} to={prevLink.current??'/'}> Go Back</Link>
             {movie&&
                 <MovieInfo details={movie} />}
             {status === 'pending' && <Loader />}
