@@ -22,3 +22,9 @@
     height: auto;
     object-fit: cover;
 }
+.noImgTitle{
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+}
