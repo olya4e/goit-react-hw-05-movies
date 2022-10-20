@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom'
+import {IMG_URL} from 'constants/constants';
 import css from 'components/MovieDetails/MovieDetails.module.css';
 export const MovieInfo = ({ details, location }) => {
     
     const  { poster_path, title, release_date, vote_average, overview, genres } =
         details
-    const IMG_URL = 'https://image.tmdb.org/t/p/w500';
     return (
         <div>
             <div className={css.wrapper}>

@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { fetchCast } from '../../api/movieApi'
+import {IMG_URL} from 'constants/constants';
 import css from './Cast.module.css'
 
 export const Cast = () => {
     const [cast, setCast] = useState([])
     const { id } = useParams()
-    const IMG_URL = 'https://image.tmdb.org/t/p/w500';
     useEffect(() => {
         const getCast = async () => {
             try {

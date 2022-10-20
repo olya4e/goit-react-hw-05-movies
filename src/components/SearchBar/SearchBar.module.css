@@ -17,12 +17,7 @@
     padding: 10px 20px;
     outline: none;
     border: none;
-    /* color: ${p => p.theme.colors.text}; */
     background-color: transparent;
-
-    /* ::placeholder {
-        color: ${p => p.theme.colors.text};
-    } */
 }
 .searchBtn{
     display: flex;
@@ -32,7 +27,6 @@
         border: none;
         outline: none;
         background-color: transparent;
-        /* color: ${p => p.theme.colors.text}; */
         transition: color 450ms ease-in-out;
     
 }
